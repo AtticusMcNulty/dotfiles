@@ -1,13 +1,24 @@
-local o = vim.opt
-vim.g.mapleader = ' '          -- space is the leader key
-o.expandtab = true             -- spaces, not tabs
-o.shiftwidth = 2               -- 2 spaces per indent level
-o.number = true                -- absolute number on the cursor line, relative elsewhere
-o.relativenumber = true        -- relative line numbers for fast jumps
-o.ignorecase = true            -- search is case-insensitive by default
-o.smartcase = true             -- case-sensitive only if i type a capital
-o.clipboard = 'unnamedplus'    -- share the system clipboard
-o.scrolloff = 16               -- keep cursor away from the screen edge
-o.undofile = true              -- persistent undo across sessions
-o.mouse = ''                   -- no mouse in nvim; also lets Herdr keep host mouse capture off so Escape isn't swallowed
+-- -----------------------------------------------------------------------------
+-- Configures Neovim's built-in editor behavior, including indentation,
+-- searching, line numbers, clipboard integration, and other editing defaults.
+-- -----------------------------------------------------------------------------
 
+local o = vim.opt
+
+-- Uses Space as the leader key for custom shortcuts.
+vim.g.mapleader = ' '
+
+-- Configures the default editing behavior.
+o.expandtab = true          -- Inserts spaces instead of tabs.
+o.shiftwidth = 2            -- Uses two spaces for each indentation level.
+o.number = true             -- Shows the current line number.
+o.relativenumber = true     -- Shows relative line numbers for other lines.
+o.ignorecase = true         -- Makes searches case-insensitive by default.
+o.smartcase = true          -- Makes searches case-sensitive when uppercase is used.
+o.clipboard = 'unnamedplus' -- Shares the clipboard with the operating system.
+o.scrolloff = 16            -- Keeps the cursor away from the top and bottom of the screen.
+o.undofile = true           -- Persists undo history across sessions.
+
+-- Disables mouse support so Neovim stays keyboard-driven and lets Herdr keep
+-- host mouse capture disabled, preventing Escape from being swallowed.
+-- o.mouse = ''
