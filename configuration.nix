@@ -64,6 +64,10 @@
   nix-homebrew = {
     enable = true;
     inherit user;
+
+    # Adopt existing Homebrew installation instead of failing.
+    # Preserves your installed packages while moving Homebrew under nix-homebrew's management.
+    autoMigrate = true;
   };
 
   # Configures the Homebrew packages installed on this machine.
